@@ -37,10 +37,8 @@ public class MainApp extends Application {
 
     public static void main(String[] args) {
         if (hostAvailabilityCheck()) {
-            System.out.println("Server is already running, the download continues...");
             launch(args);
         } else {
-            System.out.println("Wait for server load...");
             Server socketServer = new Server();
             socketServer.start();
             launch(args);

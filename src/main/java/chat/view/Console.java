@@ -16,7 +16,6 @@ public class Console {
 
     public static void main(String[] args) throws IOException {
         if (hostAvailabilityCheck()) {
-            System.out.println("Server is already running, the download continues...");
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Enter your [Nickname]: ");
             String nickname = reader.readLine();
@@ -33,7 +32,6 @@ public class Console {
             }
 
         } else {
-            System.out.println("Wait for server load...");
             Server socketServer = new Server();
             socketServer.start();
         }
